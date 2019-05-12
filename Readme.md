@@ -1,7 +1,7 @@
 # Личный проект «Девайс»
 
 * Студент: [Dmitry Stepanov](https://up.htmlacademy.ru/htmlcss/25/user/1042939).
-* Наставник: `Сергей Артёмов`.
+* Наставник: `Сергей Артёмов`. (https://htmlacademy.ru/profile/firefoxic)
 
 ---
 
