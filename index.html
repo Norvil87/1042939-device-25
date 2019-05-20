@@ -7,7 +7,7 @@
   <body>
 
     <header class="main-header">
-      <span class="index-logo index-logo-header">Device</span>
+      <img src="img/svg/logo-device.svg" class="index-logo index-logo-header" width="163" height="35" alt="Логотип интернет-магазина Device">
       <form class="index-search" action="#" method="post">
         <input type="search" name="search" placeholder="Поиск по сайту">
       </form>
@@ -42,9 +42,9 @@
 
       <section class="main-slider">
         <form class="main-slider-toggler" action="#" method="post">
-            <input type="radio" name="main-slider-option">
-            <input type="radio" name="main-slider-option">
-            <input type="radio" name="main-slider-option">
+            <input type="button" name="main-slider-control" value="Слайд-1">
+            <input type="button" name="main-slider-comtrol" value="Слайд-2">
+            <input type="button" name="main-slider-control" value="Слайд-3">
         </form>
         <ul class="main-slider-list">
           <li class="main-slide-1">
@@ -107,12 +107,12 @@
       <section class="popular">
         <table class="popular-list">
           <tr>
-            <td><img src="img/popular-1.png" width="160" height="160" alt="Виртуальная реальность"></td>
-            <td><img src="img/popular-2.png" width="160" height="160" alt="Моноподы для селфи"></td>
-            <td><img src="img/popular-3.png" width="160" height="160" alt="Экшн-камеры"></td>
-            <td><img src="img/popular-4.png" width="160" height="160" alt="Фитнес браслеты"></td>
-            <td><img src="img/popular-5.png" width="160" height="160" alt="Умные часы"></td>
-            <td><img src="img/popular-6.png" width="160" height="160" alt="Квадрокоптеры"></td>
+            <td><img src="img/svg/popular-1.svg" width="160" height="160" alt="Виртуальная реальность"></td>
+            <td><img src="img/svg/popular-2.svg" width="160" height="160" alt="Моноподы для селфи"></td>
+            <td><img src="img/svg/popular-3.svg" width="160" height="160" alt="Экшн-камеры"></td>
+            <td><img src="img/svg/popular-4.svg" width="160" height="160" alt="Фитнес браслеты"></td>
+            <td><img src="img/svg/popular-5.svg" width="160" height="160" alt="Умные часы"></td>
+            <td><img src="img/svg/popular-6.svg" width="160" height="160" alt="Квадрокоптеры"></td>
           </tr>
           <tr>
             <td><a href="#">Виртуальная реальность</a></td>
@@ -127,31 +127,31 @@
 
       <section class="service-slider">
         <ul class="service-slider-toggle">
-          <li><a class="button" href="#">Доставка</a></li>
-          <li><a class="button" href="#">Гарантия</a></li>
-          <li><a class="button" href="#">Кредит</a></li>
+          <li><a class="button" href="#service-slide-1">Доставка</a></li>
+          <li><a class="button" href="#service-slide-2">Гарантия</a></li>
+          <li><a class="button" href="#service-slide-3">Кредит</a></li>
         </ul>
         <ul class="service-slider-list">
-          <li class="service-slide-1">
+          <li class="service-slide-1" id="service-slide-1">
             <h2>Доставка</h2>
             <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно!
                Ведь мы неплохо заработаем, поднимая его на ваш этаж.
             </p>
-            <img src="img/service-delivery.png" width="160" height="185" alt="Доставка">
+            <img src="img/svg/delivery.svg" width="160" height="185" alt="Доставка">
           </li>
-            <li class="service-slide-2">
+            <li class="service-slide-2" id="service-slide-2">
               <h2>Гарантия</h2>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
                  Товар, не дом, конечно же.
               </p>
-              <img src="img/service-warranty.png" width="160" height="185" alt="Гарантия">
+              <img src="img/svg/warranty.svg" width="160" height="185" alt="Гарантия">
             </li>
-            <li class="service-slide-3">
+            <li class="service-slide-3" id="service-slide-3">
               <h2>Кредит</h2>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные
                  условия кредита. Выгодные для нашего банка, разумеется.
               </p>
-              <img src="img/service-credit.png" width="160" height="185" alt="Кредит">
+              <img src="img/svg/credit.svg" width="160" height="185" alt="Кредит">
             </li>
         </ul>
       </section>
@@ -187,13 +187,15 @@
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <img src="img/map.jpg" width="565" height="222" alt="Улица Строителей, 15">
-        <a class="button" href="#">Напишите нам</a>
+        <p>
+          <a class="button" href="#">Напишите нам</a>
+        </p>
       </section>
     </main>
 
     <footer>
       <section class="footer-top">
-        <span class="index-logo index-logo-footer">Device</span>
+        <img src="img/svg/logo-device.svg" class="index-logo index-logo-footer" width="163" height="35" alt="Логотип интернет-магазина Device">
         <ul class="user-interface">
           <li class="user-interface-enter"><a href="#">Войти</a></li>
           <li class="user-interface-compare"><a href="#">Сравнить</a></li>
@@ -214,9 +216,9 @@
       <section class="footer-bottom">
         <span></span>
         <ul class="social-list">
-          <li ><a class="social-button social-fb">FB</a></li>
-          <li><a class="social-button social-ig">IG</a></li>
-          <li><a class="social-button social-tw">TW</a></li>
+          <li ><a class="social-button social-fb" href="#">Группа в Facebook</a></li>
+          <li><a class="social-button social-ig" href="#">Группа в Instagramm</a></li>
+          <li><a class="social-button social-tw" href="#">Группа в Twitter</a></li>
         </ul>
         <span></span>
       </section>
@@ -245,7 +247,9 @@
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как доехать</h2>
       <img src="img/map-big.jpg" width="960" height="560" alt="г. Москва, ул. Строителей 15">
-      <button class="modal-close">Закрыть</button>
+      <p>
+        <button class="modal-close">Закрыть</button>
+      </p>
     </section>
 
 
