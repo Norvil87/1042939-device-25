@@ -3,43 +3,45 @@
   <head>
     <meta charset="utf-8">
     <title>Dmitry Stepanov: Девайс</title>
+    <link href="css/normalize.css" rel="stylesheet">
+  	<link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body class="inner-page">
 
-    <header class="inner-page-header">
-      <a href="index.html"><img src="img/svg/logo-device.svg" class="index-logo index-logo-header" width="163" height="35" alt="Логотип интернет-магазина Device"></a>
-      <form class="index-search" action="#" method="post">   <!--Не забыть прописать action-->
-        <input type="search" placeholder="Поиск по сайту">
+    <header class="header-index header-inner-page">
+      <img src="img/svg/logo-device.svg" class="index-logo index-logo-header" width="163" height="35" alt="Логотип интернет-магазина Device">
+      <form class="index-search" action="#" method="post">
+        <input type="search" name="search" placeholder="Поиск по сайту">
       </form>
 
       <ul class="user-interface">
-          <li class="user-interface-current-user">Валентин Петухов</li>
-          <li class="user-interface-exit"><a href="#">Выйти</a></li>
-          <li class="user-interface-compare"><a href="#">Сравнить</a></li>
-          <li class="user-interface-bin"><a href="#">Корзина</a></li>
+          <li class="user-interface-current-user"><a href="#">Валентин Петухов</a></li>
+          <li class="user-interface-option"><a href="#">Выйти</a></li>
+          <li class="user-interface-option"><a href="#">Сравнить</a></li>
+          <li class="user-interface-option"><a href="#">Корзина</a></li>
         </ul>
 
-        <nav class="index-nav">
-          <ul class="site-navigation">
-            <li class="nav-catalog"><a href="catalog.html">Каталог товаров</a>
+        <nav class="nav-index">
+          <ul>
+            <li class="nav-index-option nav-index-catalog"><a href="catalog.html">Каталог товаров</a>
               <ul>
-                <li><a href="#">Виртуальная реальность</a></li>
-                <li><a href="#">Моноподы для селфи</a></li>
-                <li><a href="#">Экшн-камеры</a></li>
-                <li><a href="#">Фитнесс-браслеты</a></li>
-                <li><a href="#">Умные часы</a></li>
-                <li><a href="#">Квадрокоптеры</a></li>
+                <li class="nav-index-catalog-item"><a href="#">Виртуальная реальность</a></li>
+                <li class="nav-index-catalog-item"><a href="#">Моноподы для селфи</a></li>
+                <li class="nav-index-catalog-item"><a href="#">Экшн-камеры</a></li>
+                <li class="nav-index-catalog-item"><a href="#">Фитнесс-браслеты</a></li>
+                <li class="nav-index-catalog-item"><a href="#">Умные часы</a></li>
+                <li class="nav-index-catalog-item"><a href="#">Квадрокоптеры</a></li>
               </ul>
             </li>
-            <li><a href="delivery.html">Доставкав</a></li>
-            <li><a href="warranty.html">Гарантия</a></li>
-            <li><a href="contacts.html">Контакты</a></li>
+            <li class="nav-index-option"><a href="delivery.html">Доставка</a></li>
+            <li class="nav-index-option"><a href="warranty.html">Гарантия</a></li>
+            <li class="nav-index-option"><a href="contacts.html">Контакты</a></li>
           </ul>
         </nav>
-    </header>
+      </header>
 
     <main>
-      <h1>Моноподы для селфи</h1>
+      <h1 class="inner-page-main-header">Моноподы для селфи</h1>
 
       <ul class="breadcrumbs">
         <li><a href="index.html">Главная</a></li>
@@ -50,47 +52,51 @@
       <section class="filter">
         <h2>Фильтр:</h2>
         <form class="filters" action="#" method="post">
-          <fieldset class="filter-price">
+          <fieldset class="filter-group filter-price">
             <legend>Стоимость</legend>
             <div></div>  <!--Здесь будет ползунок-->
             <input type="text" placeholder="от 0">
             <input type="text" placeholder="до 5000">
           </fieldset>
-          <fieldset class="filter-color">
+          <fieldset class="filter-group filter-color">
             <legend>Цвет</legend>
-            <p class="filter-option">
-              <input type="checkbox" id="black" checked>
+            <ul>
+            <li class="filter-option">
+              <input class="visually-hidden" type="checkbox" id="black" checked>
               <label for="black">Черный</label>
-            </p>
-            <p class="filter-option">
-              <input type="checkbox" id="white">
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden" type="checkbox" id="white">
               <label for="white">Белый</label>
-            </p>
-            <p class="filter-option">
-              <input type="checkbox" id="blue" checked>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden" type="checkbox" id="blue" checked>
               <label for="blue">Синий</label>
-            </p>
-            <p class="filter-option">
-              <input type="checkbox" id="red" checked>
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden" type="checkbox" id="red" checked>
               <label for="red">Красный</label>
-            </p>
-            <p class="filter-option">
-              <input type="checkbox" id="pink">
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden" type="checkbox" id="pink">
               <label for="pink">Розовый</label>
-            </p>
+            </li>
+          </ul>
           </fieldset>
-          <fieldset class="bluetooth">
+          <fieldset class="filter-group bluetooth">
             <legend>Bluetooth</legend>
-            <p class="filter-option">
-              <input type="radio" name="bluetooth" id="isBluetooth" checked>
+            <ul>
+            <li class="filter-option">
+              <input class="visually-hidden" type="radio" name="bluetooth" id="isBluetooth" checked>
               <label for="isBluetooth">Есть</label>
-            </p>
-            <p class="filter-option">
-              <input type="radio" name="bluetooth" id="noBluetooth">
+            </li>
+            <li class="filter-option">
+              <input class="visually-hidden" type="radio" name="bluetooth" id="noBluetooth">
               <label for="noBluetooth">Нет</label>
-            </p>
+            </li>
+          </ul>
           </fieldset>
-          <button class="button">Показать</button>
+          <a class="button" href="#">Показать</a>
         </form>
       </section>
 
@@ -127,44 +133,42 @@
 
 
         <ul class="pagination">
-          <li><a href="#">Назад</a></li>
+          <li class="pagination-control pagination-control-backwards"><a href="#">Назад</a></li>
           <li><a href="#" class="current-page">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
-          <li><a href="#">Вперед</a></li>
+          <li class="pagination-control pagination-control-forward"><a href="#">Вперед</a></li>
         </ul>
 
     </main>
 
-    <footer class="inner-page-footer">
+    <footer class="footer index-footer">
       <section class="footer-top">
-        <a href="index.html"><img src="img/svg/logo-device.svg" class="index-logo index-logo-footer" width="163" height="35" alt="Логотип интернет-магазина Device"></a>
-        <ul class="user-interface">
-          <li class="user-interface-current-user">Валентин Петухов</li>
+        <img src="img/svg/logo-device.svg" class="index-logo index-logo-footer" width="163" height="35" alt="Логотип интернет-магазина Device">
+        <ul class="user-interface user-interface-footer">
+          <li class="user-interface-option"><a href="#">Валентин Петухов</a></li>
           <li class="user-interface-exit"><a href="#">Выйти</a></li>
-          <li class="user-interface-compare"><a href="#">Сравнить</a></li>
-          <li class="user-interface-bin"><a href="#">Корзина</a></li>
-          </ul>
+          <li class="user-interface-option"><a href="#">Сравнить</a></li>
+          <li class="user-interface-option"><a href="#">Корзина</a></li>
+        </ul>
       </section>
 
       <section class="footer-middle">
         <p class="footer-contacts">г. Москва, ул. Строителей 15</p>
         <ul>
-          <li><a href="delivery.html">Доставка</a></li>
-          <li><a href="warranty.html">Гарантия</a></li>
-          <li><a href="contacts.html">Контакты</a></li>
+          <li class="nav-index-option"><a href="delivery.html">Доставка</a></li>
+          <li class="nav-index-option"><a href="warranty.html">Гарантия</a></li>
+          <li class="nav-index-option"><a href="contacts.html">Контакты</a></li>
         </ul>
         <p class="footer-contacts">Тел.: +7 (495) 495-95-95</p>
       </section>
 
       <section class="footer-bottom">
-        <span></span>
         <ul class="social-list">
-          <li ><a class="social-button social-fb">FB</a></li>
-          <li><a class="social-button social-ig">IG</a></li>
-          <li><a class="social-button social-tw">TW</a></li>
+          <li ><a class="social-button social-fb" href="#">Группа в Facebook</a></li>
+          <li><a class="social-button social-ig" href="#">Группа в Instagramm</a></li>
+          <li><a class="social-button social-tw" href="#">Группа в Twitter</a></li>
         </ul>
-        <span></span>
       </section>
     </footer>
 
