@@ -58,12 +58,26 @@ a {
 }
 
 .breadcrumbs {
+	display: flex;
+
 	margin: 0;
 	margin-left: 200px;
 	margin-bottom: 50px;
 	padding: 0;
 
 	list-style: none;
+}
+
+.breadcrumbs li {
+	opacity: 0.5;
+}
+
+.breadcrumbs li:hover {
+	opacity: 1;
+}
+
+.breadcrumbs li:active {
+	opacity: 0.1;
 }
 
 .button {
@@ -106,7 +120,7 @@ a {
 
 .filter {
 	width: 470px;
-	height: 1260px;
+	height: 1290px;
 
 	background-color: #efefef;
 }
@@ -121,6 +135,9 @@ a {
 }
 
 .filter h2 {
+	margin: 0;
+	padding: 0;
+
 	height: 70px;
 
 	display: block;
@@ -132,7 +149,7 @@ a {
   text-transform: uppercase;
 	letter-spacing: 2px;
 	text-align: center;
-	vertical-align: middle;  /*почему-то не работает*/
+	vertical-align: middle;
 
 	background-color: #dcdcdc;
 }
@@ -152,7 +169,7 @@ a {
 }
 
 .footer {
-  margin-top: 95px;
+  /*margin-top: 95px;*/
   padding-bottom: 67px;
   padding-top: 67px;
   background-color: #464646;
@@ -323,7 +340,6 @@ a {
 	line-height: 20px;
 }
 
-
 .modal {
   display: none;
 }
@@ -399,10 +415,13 @@ a {
 }
 
 .pagination {
+	display: flex;
+	justify-content: space-between;
 	width: 760px;
 	height: 70px;
 
 	margin: 0;
+	margin-left: 70px;
 	padding: 0;
 
 	list-style: none;
@@ -419,6 +438,7 @@ a {
 	font-size: 16px;
 	line-height: 24px;
   font-weight: bold;
+	text-transform: uppercase;
 	letter-spacing: 2px;
 }
 
@@ -476,11 +496,15 @@ a {
 }
 
 .products {
-	margin-left:73px;
+	margin-left: 70px;
 	margin-right: 140px;
 }
 
 .products-list {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
 	margin: 0;
 	padding: 0;
 
@@ -488,11 +512,18 @@ a {
 }
 
 .product {
+	display: flex;
+	flex-direction: column;
+
 	width: 360px;
 	min-height: 465px;
 
-	margin-bottom: 70px;
+	margin-bottom: 50px;
 	margin-right: 40px;
+}
+
+.product:nth-child(2n) {
+	margin-right: 0;
 }
 
 .product-name {
@@ -500,6 +531,13 @@ a {
 	font-size: 18px;
 	line-height: 24px;
 	font-weight: bold;
+
+	width: 160px;
+	align-self: top;
+
+	order: 1;
+
+	outline: 1px solid green;
 }
 
 .product-price {
@@ -507,9 +545,14 @@ a {
 	font-size: 16px;
 	line-height: 24px;
 	font-weight: normal;
+
+	order: 2;
+
+	width: 160px;
+	salign-item: bottom;
+
+	outline: 1px solid red;
 }
-
-
 
 .service-slider-toggle {
   padding: 0;
@@ -560,11 +603,17 @@ a {
 }
 
 .sorting {
+	display: flex;
+
 	padding: 0;
 	margin: 0;
 	margin-bottom: 70px;
 
+	height: 70px;
+
 	list-style: none;
+
+	background-color: #ebebeb;
 }
 
 .sorting a {
@@ -577,6 +626,15 @@ a {
 
 .sorting li:active a {
 	opacity: 1;
+}
+
+.sorting h2 {
+	font-family: 'Gilroy', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+	letter-spacing: 2px;
 }
 
 .user-interface {
