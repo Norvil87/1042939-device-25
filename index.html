@@ -7,6 +7,7 @@
   	<link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
+    <div class="container">
 
     <header class="header-index">
       <img src="img/svg/logo-device.svg" class="index-logo index-logo-header" width="163" height="35" alt="Логотип интернет-магазина Device">
@@ -16,9 +17,9 @@
         </form>
 
         <ul class="user-interface">
-          <li class="user-interface-option"><a href="#">Войти</a></li>
-          <li class="user-interface-option"><a href="#">Сравнить</a></li>
-          <li class="user-interface-option"><a href="#">Корзина</a></li>
+          <li class="user-interface-option user-interface-enter"><a href="#">Войти</a></li>
+          <li class="user-interface-option user-interface-compare"><a href="#">Сравнить</a></li>
+          <li class="user-interface-option user-interface-cart"><a href="#">Корзина</a></li>
         </ul>
       </div>
 
@@ -130,26 +131,31 @@
         </ul>
       </section>
 
-      <section class="popular">
-        <table class="popular-list">
-          <tr class="popular-list-image">
-            <td><img src="img/svg/popular-1.svg" width="160" height="160" alt="Виртуальная реальность"></td>
-            <td><img src="img/svg/popular-2.svg" width="160" height="160" alt="Моноподы для селфи"></td>
-            <td><img src="img/svg/popular-3.svg" width="160" height="160" alt="Экшн-камеры"></td>
-            <td><img src="img/svg/popular-4.svg" width="160" height="160" alt="Фитнес браслеты"></td>
-            <td><img src="img/svg/popular-5.svg" width="160" height="160" alt="Умные часы"></td>
-            <td><img src="img/svg/popular-6.svg" width="160" height="160" alt="Квадрокоптеры"></td>
-          </tr>
-          <tr class="popular-list-name">
-            <td><a href="#">Виртуальная реальность</a></td>
-            <td><a href="#">Моноподы для селфи</a></td>
-            <td><a href="#">Экшн-камеры</a></td>
-            <td><a href="#">Фитнес браслеты</a></td>
-            <td><a href="#">Умные часы</a></td>
-            <td><a href="#">Квадрокоптеры</a></td>
-          </tr>
-        </table>
-      </section>
+      <ul class="popular">
+        <li class="popular-item">
+          <img class="popular-image" src="img/svg/popular-1.svg" width="160" height="160" alt="Виртуальная реальность">
+          <a class="popular-name" href="#">Виртуальная реальность</a>
+        </li>
+        <li class="popular-item">
+          <img class="popular-image" src="img/svg/popular-2.svg" width="160" height="160" alt="Моноподы для селфи">
+          <a class="popular-name" href="#">Моноподы для селфи</a>
+        </li>
+        <li class="popular-item">
+          <img class="popular-image" src="img/svg/popular-3.svg" width="160" height="160" alt="Экшн-камеры">
+          <a class="popular-name" href="#">Экшн-камеры</a>
+        </li>
+        <li class="popular-item">
+          <img class="popular-image" src="img/svg/popular-4.svg" width="160" height="160" alt="Фитнес браслеты">
+          <a class="popular-name" href="#">Фитнес браслеты</a>
+        </li>
+        <li class="popular-item">
+          <img class="popular-image" src="img/svg/popular-5.svg" width="160" height="160" alt="Умные часы">
+          <a class="popular-name" href="#">Умные часы</a>
+        </li>
+        <li class="popular-item">
+          <img class="popular-image" src="img/svg/popular-6.svg" width="160" height="160" alt="Квадрокоптеры">
+          <a class="popular-name" href="#">Квадрокоптеры</a>
+      </ul>
 
       <section class="service-slider">
         <div class="container service-slider-column-left">
@@ -237,13 +243,13 @@
       </div>
     </main>
 
-    <footer class="footer index-footer">
+    <footer class="footer">
       <section class="footer-top">
         <img src="img/svg/logo-device.svg" class="index-logo index-logo-footer" width="163" height="35" alt="Логотип интернет-магазина Device">
         <ul class="user-interface user-interface-footer">
-          <li class="user-interface-option"><a href="#">Войти</a></li>
-          <li class="user-interface-option"><a href="#">Сравнить</a></li>
-          <li class="user-interface-option"><a href="#">Корзина</a></li>
+          <li class="user-interface-option user-interface-enter"><a href="#">Войти</a></li>
+          <li class="user-interface-option user-interface-compare"><a href="#">Сравнить</a></li>
+          <li class="user-interface-option user-interface-cart"><a href="#">Корзина</a></li>
         </ul>
       </section>
 
@@ -258,7 +264,7 @@
       </section>
 
       <section class="footer-bottom">
-        <span>Желтая линия</span>
+        <span></span>
         <ul class="social-list">
           <li ><a class="social-button social-fb" href="#">Группа в Facebook</a></li>
           <li><a class="social-button social-ig" href="#">Группа в Instagramm</a></li>
@@ -296,6 +302,6 @@
       </p>
     </section>
 
-
+  </div>
   </body>
 </html>

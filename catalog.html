@@ -7,6 +7,7 @@
   	<link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body class="inner-page">
+    <div class="container">
 
     <header class="header-index header-inner-page">
       <img src="img/svg/logo-device.svg" class="index-logo index-logo-header" width="163" height="35" alt="Логотип интернет-магазина Device">
@@ -66,23 +67,23 @@
                 <legend>Цвет</legend>
                 <ul>
                 <li class="filter-option">
-                  <input class="visually-hidden" type="checkbox" id="black" checked>
+                  <input class="visually-hidden filter-option-checkbox" type="checkbox" id="black" checked>
                   <label for="black">Черный</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden" type="checkbox" id="white">
+                  <input class="visually-hidden filter-option-checkbox" type="checkbox" id="white">
                   <label for="white">Белый</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden" type="checkbox" id="blue" checked>
+                  <input class="visually-hidden filter-option-checkbox" type="checkbox" id="blue" checked>
                   <label for="blue">Синий</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden" type="checkbox" id="red" checked>
+                  <input class="visually-hidden filter-option-checkbox" type="checkbox" id="red" checked>
                   <label for="red">Красный</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden" type="checkbox" id="pink">
+                  <input class="visually-hidden filter-option-checkbox" type="checkbox" id="pink">
                   <label for="pink">Розовый</label>
                 </li>
               </ul>
@@ -91,11 +92,11 @@
                 <legend>Bluetooth</legend>
                 <ul>
                 <li class="filter-option">
-                  <input class="visually-hidden" type="radio" name="bluetooth" id="isBluetooth" checked>
+                  <input class="visually-hidden filter-option-radio" type="radio" name="bluetooth" id="isBluetooth" checked>
                   <label for="isBluetooth">Есть</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden" type="radio" name="bluetooth" id="noBluetooth">
+                  <input class="visually-hidden filter-option-radio" type="radio" name="bluetooth" id="noBluetooth">
                   <label for="noBluetooth">Нет</label>
                 </li>
               </ul>
@@ -107,12 +108,14 @@
 
         <div class="catalog-wrapper-column-right">
 
-            <ul class="sorting">
-              <h2>Сортировка:</h2>
+          <section class="sorting">
+            <h2>Сортировка:</h2>
+            <ul>
               <li class="sorting-current-option"><a href="#">По цене</a></li>
               <li><a href="#">По типу</a></li>
               <li><a href="#">По популярности</a></li>
             </ul>
+          </section>
 
           <section class="products">
             <ul class="products-list">
@@ -151,7 +154,7 @@
 
     </main>
 
-    <footer class="footer index-footer">
+    <footer class="footer footer-catalog">
       <section class="footer-top">
         <img src="img/svg/logo-device.svg" class="index-logo index-logo-footer" width="163" height="35" alt="Логотип интернет-магазина Device">
         <ul class="user-interface user-interface-footer">
@@ -174,13 +177,13 @@
 
       <section class="footer-bottom">
         <ul class="social-list">
-          <li ><a class="social-button social-fb" href="#">Группа в Facebook</a></li>
+          <li><a class="social-button social-fb" href="#">Группа в Facebook</a></li>
           <li><a class="social-button social-ig" href="#">Группа в Instagramm</a></li>
           <li><a class="social-button social-tw" href="#">Группа в Twitter</a></li>
         </ul>
       </section>
     </footer>
 
-
+  </div>
   </body>
 </html>
