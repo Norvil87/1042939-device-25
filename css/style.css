@@ -917,6 +917,7 @@ a {
 	margin-bottom: 70px;
 
 	height: 47px;
+	width: 850px;
 
 	background-color: #ebebeb;
 }
@@ -933,7 +934,7 @@ a {
 
 .sorting::before {
 	top: 30px;
-	right: 40px;
+	right: 60px;
 
 	background-image: url("../img/svg/icon-up-dir.svg");
 	background-repeat: no-repeat;
@@ -943,7 +944,7 @@ a {
 
 .sorting::after {
 	top: 30px;
-	right: 20px;
+	right: 40px;
 
 	background-image: url("../img/svg/icon-down-dir.svg");
 	background-repeat: no-repeat;
