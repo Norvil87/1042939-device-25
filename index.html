@@ -3,8 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Dmitry Stepanov: Девайс</title>
-  	<link href="css/normalize.css" rel="stylesheet">
-  	<link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div class="container-centrifier">
@@ -24,13 +24,11 @@
 
       <div class="container">
         <form class="index-search" action="#" method="post">
-          <input class="search-input" type="search" name="search" placeholder="Поиск по сайту">
-          <a class="button search-submit">Найти</a>
+          <input class="index-search-input" type="search" name="search" placeholder="Поиск по сайту">
+          <button class="button search-submit" type="submit">Найти</button>
         </form>
 
-
-
-        <ul class="user-interface">
+        <ul class="user-interface user-interface-header">
           <li class="user-interface-option user-interface-enter"><a href="#">Войти</a></li>
           <li class="user-interface-option user-interface-compare"><a href="#">Сравнить</a></li>
           <li class="user-interface-option user-interface-cart"><a href="#">Корзина</a></li>
@@ -39,34 +37,32 @@
 
       <nav class="nav-index">
         <ul>
-          <div class="container nav-index-left-column">
-            <li class="nav-index-option nav-index-catalog"><a href="catalog.html">Каталог товаров</a>
-              <ul>
-                <div class="container nav-index-catalog-left-column">
-                  <li class="nav-index-catalog-item"><a href="#">Виртуальная реальность</a></li>
-                  <li class="nav-index-catalog-item"><a href="#">Моноподы для селфи</a></li>
-                  <li class="nav-index-catalog-item"><a href="#">Экшн-камеры</a></li>
-                </div>
-                <div class="container nav-index-catalog-middle-column">
-                  <li class="nav-index-catalog-item"><a href="#">Фитнесс-браслеты</a></li>
-                  <li class="nav-index-catalog-item"><a href="#">Умные часы</a></li>
-                </div>
-                <div class="container nav-index-catalog-right-column">
-                  <li class="nav-index-catalog-item"><a href="#">Квадрокоптеры</a></li>
-                </div>
+          <li class="nav-index-option nav-index-catalog"><a href="catalog.html">Каталог товаров</a>
+            <div>
+              <ul class="nav-index-catalog-column nav-index-catalog-left-column">
+                <li class="nav-index-catalog-item"><a href="#">Виртуальная реальность</a></li>
+                <li class="nav-index-catalog-item"><a href="#">Моноподы для селфи</a></li>
+                <li class="nav-index-catalog-item"><a href="#">Экшн-камеры</a></li>
               </ul>
-            </li>
-          </div>
-          <div class="container nav-index-right-column">
-            <li class="nav-index-option"><a href="delivery.html">Доставка</a></li>
-            <li class="nav-index-option"><a href="warranty.html">Гарантия</a></li>
-            <li class="nav-index-option"><a href="contacts.html">Контакты</a></li>
-          </div>
+              <ul class="nav-index-catalog-column nav-index-catalog-left-column">
+                <li class="nav-index-catalog-item"><a href="#">Фитнесс-браслеты</a></li>
+                <li class="nav-index-catalog-item"><a href="#">Умные часы</a></li>
+              </ul>
+              <ul class="nav-index-catalog-column nav-index-catalog-left-column">
+                <li class="nav-index-catalog-item"><a href="#">Квадрокоптеры</a></li>
+              </ul>
+            </div>
+          </li>
+          <li class="nav-index-option nav-index-delivery"><a href="delivery.html">Доставка</a></li>
+          <li class="nav-index-option nav-index-warranty"><a href="warranty.html">Гарантия</a></li>
+          <li class="nav-index-option nav-index-contacts"><a href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </header>
+  </div>
 
     <main>
+      <div class="container-centrifier">
       <h1 class="visually-hidden">Интернет-магазин Device</h1>
 
       <section class="main-slider">
@@ -185,18 +181,18 @@
       </ul>
     </div>
 
-      <div class="underlay service-slider-underlay">
-        <div class="container-centrifier">
+
           <section class="service-slider">
-            <div class="container service-slider-column-left">
-              <ul class="service-slider-toggle">
-                <li class="service-slider-toggle-option"><a class="button" href="#service-slide-1">Доставка</a></li>
-                <li class="service-slider-toggle-option"><a class="button" href="#service-slide-2">Гарантия</a></li>
-                <li class="service-slider-toggle-option"><a class="button" href="#service-slide-3">Кредит</a></li>
-              </ul>
-            </div>
-            <div class="container service-slider-column-right">
-              <ul class="service-slider-list">
+            <div class="container-centrifier">
+              <div class="container service-slider-column-left">
+                <ul class="service-slider-toggle">
+                  <li class="service-slider-toggle-option" ><a class="button" href="#service-slide-1" id="service-toggle-1" name="service-toggle">Доставка</a></li>
+                  <li class="service-slider-toggle-option" ><a class="button" href="#service-slide-2" id="service-toggle-2" name="service-toggle">Гарантия</a></li>
+                  <li class="service-slider-toggle-option" ><a class="button" href="#service-slide-3" id="service-toggle-3">Кредит</a></li>
+                </ul>
+              </div>
+              <div class="container service-slider-column-right">
+                <ul class="service-slider-list">
                 <li class="service-slide service-slide-1" id="service-slide-1">
                   <div class="container service-slide-column-left">
                     <h2>Доставка</h2>
@@ -208,16 +204,16 @@
                     <img src="img/svg/delivery.svg" width="160" height="185" alt="Доставка">
                   </div>
                 </li>
-                <li class="service-slide service-slide-2" id="service-slide-2">
-                  <div class="container service-slide-column-left">
-                    <h2>Гарантия</h2>
-                    <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
-                       Товар, не дом, конечно же.
-                    </p>
-                  </div>
-                  <div class="container service-slide-column-right">
-                    <img src="img/svg/warranty.svg" width="160" height="185" alt="Гарантия">
-                  </div>
+                  <li class="service-slide service-slide-2" id="service-slide-2">
+                    <div class="container service-slide-column-left">
+                      <h2>Гарантия</h2>
+                      <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.
+                         Товар, не дом, конечно же.
+                      </p>
+                    </div>
+                    <div class="container service-slide-column-right">
+                      <img src="img/svg/warranty.svg" width="160" height="185" alt="Гарантия">
+                    </div>
                   </li>
                   <li class="service-slide service-slide-3" id="service-slide-3">
                     <div class="container service-slide-column-left">
@@ -232,16 +228,25 @@
                   </li>
                 </ul>
              </div>
+           </div>
           </section>
-      </div>
-    </div>
 
-   <div class="container-centrifier">
+
+
+       <div class="container-centrifier">
         <ul class="logotypes-list">
-          <li class="logotype logo-1"></li>
-          <li class="logotype logo-2"></li>
-          <li class="logotype logo-3"></li>
-          <li class="logotype logo-4"></li>
+          <li class="logotype logo-1">
+            <img src="img/logo-1.jpg" width="255" height="80" alt="Логотип 1">
+          </li>
+          <li class="logotype logo-2">
+            <img src="img/logo-2.jpg" width="255" height="80" alt="Логотип 2">
+          </li>
+          <li class="logotype logo-3">
+            <img src="img/logo-3.jpg" width="255" height="80" alt="Логотип 3">
+          </li>
+          <li class="logotype logo-4">
+          <img src="img/logo-4.jpg" width="255" height="80" alt="Логотип 4">
+        </li>
         </ul>
 
         <div class="wrapper">
@@ -260,18 +265,19 @@
           <section class="contacts">
             <h2>Контакты</h2>
             <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-            <img src="img/map.jpg" width="565" height="222" alt="Улица Строителей, 15">
+            <p href="#" class="contacts-button-map">
+              <img src="img/map.jpg" width="565" height="222" alt="Улица Строителей, 15">
+            </p>
             <p>
-              <a class="button" href="#">Напишите нам</a>
+              <a class="button contacts-write-us" href="#">Напишите нам</a>
             </p>
           </section>
+        </div>
       </div>
-    </div>
     </main>
 
-    <div class="underlay footer-underlay">
-      <div class="container-centrifier">
         <footer class="footer">
+          <div class="container-centrifier">
           <section class="footer-top">
 
             <svg class="logo logo-footer" width="164" height="35" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Логотип магазина DEVICE">
@@ -292,7 +298,7 @@
               <li class="nav-index-option"><a href="warranty.html">Гарантия</a></li>
               <li class="nav-index-option"><a href="contacts.html">Контакты</a></li>
             </ul>
-            <p class="footer-contacts">Тел.: +7 (495) 495-95-95</p>
+            <p class="footer-contacts footer-contacts-tel">Тел.: +7 (495) 495-95-95</p>
           </section>
 
           <section class="footer-bottom">
@@ -306,9 +312,10 @@
               <img src="img/svg/logo-html.svg" width="27" height="35" alt="Логотип HTML академии">
             </a>
           </section>
+          </div>
         </footer>
-      </div>
-    </div>
+
+
 
     <section class="modal modal-login">
       <h2 class="visually-hidden">Форма отправки</h2>
@@ -332,11 +339,85 @@
 
     <section class="modal modal-map">
       <h2 class="visually-hidden">Как доехать</h2>
-      <img src="img/map-big.jpg" width="960" height="560" alt="г. Москва, ул. Строителей 15">
+        <img src="img/map-big.jpg" width="960" height="560" alt="г. Москва, ул. Строителей 15">
       <p>
         <button class="modal-close">Закрыть</button>
       </p>
     </section>
 
+  <script>
+    var link = document.querySelector(".contacts-write-us");
+    var mapLink = document.querySelector(".contacts-button-map")
+    var popup = document.querySelector(".modal-login");
+    var mapPopup = document.querySelector(".modal-map");
+    var form = popup.querySelector("form");
+    var close = popup.querySelector(".modal-close");
+    var mapClose = mapPopup.querySelector(".modal-close");
+    var login = popup.querySelector("[name=user-name]");
+    var email = popup.querySelector("[name=user-email]");
+    var storage = "";
+
+    storage = localStorage.getItem("login");
+
+    link.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.add("modal-show");
+
+      if (storage) {
+        login.value = storage;
+        email.focus();
+      } else {
+        login.focus();
+        }
+    });
+
+    close.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      popup.classList.remove("modal-show");
+      popup.classList.remove("modal-error");
+    });
+
+    form.addEventListener("submit", function (evt) {
+      if (!login.value || !email.value) {
+      evt.preventDefault();
+      popup.classList.remove("modal-error");
+      popup.offsetWidth = popup.offsetWidth;  //разобраться что это означает
+      popup.classList.add("modal-error");
+      console.log("hhhhhhh");
+    } else {
+      localStorage.setItem("login", login.value);
+    }
+    });
+
+    window.addEventListener("keydown", function (evt) {
+      if (evt.keyCode === 27) {
+        evt.preventDefault();
+        if (popup.classList.contains("modal-show")) {
+            popup.classList.remove("modal-show");
+            popup.classList.remove("modal-error");
+        }
+      }
+    });
+
+    mapLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      mapPopup.classList.add("modal-show");
+    });
+
+    mapClose.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      mapPopup.classList.remove("modal-show");
+    });
+
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (mapPopup.classList.contains("modal-show")) {
+              mapPopup.classList.remove("modal-show");
+          }
+        }
+      });
+
+  </script>
   </body>
 </html>

@@ -26,48 +26,46 @@
 
       <div class="container">
         <form class="index-search" action="#" method="post">
-          <input class="search-input" type="search" name="search" placeholder="Поиск по сайту">
-          <a class="button search-submit">Найти</a>
+          <input class="index-search-input" type="search" name="search" placeholder="Поиск по сайту">
+          <button class="button search-submit" type="submit">Найти</button>
         </form>
 
         <ul class="user-interface user-interface-inner-page">
-          <li class="user-interface-option user-interface-enter"><a href="#">Валентин Петухов</a></li>
+          <li class="user-interface-option user-interface-enter"><a href="#profile">Валентин Петухов</a></li>
           <li class="user-interface-option user-interface-exit"><a href="#">Выйти</a></li>
           <li class="user-interface-option user-interface-compare"><a href="#">Сравнить</a></li>
           <li class="user-interface-option user-interface-cart"><a href="#">Корзина</a></li>
         </ul>
       </div>
 
-      <nav class="nav-index">
+			<nav class="nav-index">
         <ul>
-          <div class="container nav-index-left-column">
-            <li class="nav-index-option nav-index-catalog"><a href="catalog.html">Каталог товаров</a>
-              <ul>
-                <div class="container nav-index-catalog-left-column">
-                  <li class="nav-index-catalog-item"><a href="#">Виртуальная реальность</a></li>
-                  <li class="nav-index-catalog-item"><a href="#">Моноподы для селфи</a></li>
-                  <li class="nav-index-catalog-item"><a href="#">Экшн-камеры</a></li>
-                </div>
-                <div class="container nav-index-catalog-middle-column">
-                  <li class="nav-index-catalog-item"><a href="#">Фитнесс-браслеты</a></li>
-                  <li class="nav-index-catalog-item"><a href="#">Умные часы</a></li>
-                </div>
-                <div class="container nav-index-catalog-right-column">
-                  <li class="nav-index-catalog-item"><a href="#">Квадрокоптеры</a></li>
-                </div>
-              </ul>
-            </li>
-          </div>
-          <div class="container nav-index-right-column">
-            <li class="nav-index-option"><a href="delivery.html">Доставка</a></li>
-            <li class="nav-index-option"><a href="warranty.html">Гарантия</a></li>
-            <li class="nav-index-option"><a href="contacts.html">Контакты</a></li>
-          </div>
+          <li class="nav-index-option nav-index-catalog"><a href="catalog.html">Каталог товаров</a>
+						<div>
+	            <ul class="nav-index-catalog-column nav-index-catalog-left-column">
+	              <li class="nav-index-catalog-item"><a href="#">Виртуальная реальность</a></li>
+	              <li class="nav-index-catalog-item"><a href="#">Моноподы для селфи</a></li>
+	              <li class="nav-index-catalog-item"><a href="#">Экшн-камеры</a></li>
+	            </ul>
+	            <ul class="nav-index-catalog-column nav-index-catalog-left-column">
+	              <li class="nav-index-catalog-item"><a href="#">Фитнесс-браслеты</a></li>
+	              <li class="nav-index-catalog-item"><a href="#">Умные часы</a></li>
+	            </ul>
+	            <ul class="nav-index-catalog-column nav-index-catalog-left-column">
+	              <li class="nav-index-catalog-item"><a href="#">Квадрокоптеры</a></li>
+	            </ul>
+					  </div>
+          </li>
+          <li class="nav-index-option nav-index-delivery"><a href="delivery.html">Доставка</a></li>
+          <li class="nav-index-option nav-index-warranty"><a href="warranty.html">Гарантия</a></li>
+          <li class="nav-index-option nav-index-contacts"><a href="contacts.html">Контакты</a></li>
         </ul>
       </nav>
     </header>
+	</div>
 
     <main>
+			<div class="container-centrifier">
       <h1 class="inner-page-main-header">Моноподы для селфи</h1>
 
       <ul class="breadcrumbs">
@@ -78,8 +76,8 @@
     </div>
 
 
-
-      <div class="wrapper container-centrifier">
+      <div class="catalog-underlay">
+        <div class="wrapper container-centrifier">
 
         <div class="catalog-wrapper-column-left">
 
@@ -88,9 +86,26 @@
                 <form class="filters" action="#" method="post">
                   <fieldset class="filter-group filter-price">
                     <legend>Стоимость</legend>
-                    <div></div>  <!--Здесь будет ползунок-->
-                    <input type="text" placeholder="от 0">
-                    <input type="text" placeholder="до 5000">
+                    <div class="range-filter">
+                      <div class="range-controls">
+                        <div class="scale">
+                          <div class="bar"></div>
+
+                        </div>
+
+                        <div class="toggle toggle-min"></div>
+                        <div class="toggle toggle-max"></div>
+                      </div>
+
+                    </div>
+                    <div class="price-controls">
+                      <label class="min-price"> от
+                        <input name="min-price" type="text" value="0">
+                      </label>
+                      <label class="max-price"> до
+                        <input name="max-price" type="text" value="5000">
+                      </label>
+                    </div>
                   </fieldset>
                   <fieldset class="filter-group filter-color">
                     <legend>Цвет</legend>
@@ -130,7 +145,7 @@
                     </li>
                   </ul>
                   </fieldset>
-                  <a class="button" href="#">Показать</a>
+                  <button class="button" type="submit">Показать</button>
                 </form>
           </section>
 
@@ -145,42 +160,44 @@
               <li><a href="#">По типу</a></li>
               <li><a href="#">По популярности</a></li>
             </ul>
+            <button class="sorting-button sorting-button-increase"></button>
+            <button class="sorting-button sorting-button-decrease"></button>
           </section>
 
           <section class="products">
             <ul class="products-list">
               <li class="product">
-                <p class="product-name">Любительская селфи-палка</p>
+                <p class="product-name"><a href="#">Любительская селфи-палка</a></p>
                 <img class="product-photo" src="img/catalog-item-1.jpg"  width="360" height="380" alt="Любительская селфи-палка">
                 <div class="product-actions">
-                  <button class="button product-to-bin">В корзину</button>
+                  <a class="button product-to-bin" href="#">В корзину</a>
                   <p class="product-to-comparison"><a href="#">Добавить к сравнению</a></p>
                 </div>
                 <p class="product-price">500 руб.</p>
               </li>
               <li class="product">
-                <p class="product-name">Профессиональная селфи-палка</p>
+                <p class="product-name"><a href="#">Профессиональная селфи-палка</a></p>
                 <img class="product-photo" src="img/catalog-item-2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
                 <div class="product-actions">
-                  <button class="button product-to-bin">В корзину</button>
+                  <a class="button product-to-bin" href="#">В корзину</a>
                   <p class="product-to-comparison"><a href="#">Добавить к сравнению</a></p>
                 </div>
                 <p class="product-price">1500 руб.</p>
               </li>
               <li class="product">
-                <p class="product-name">Непотопляемая селфи-палка</p>
+                <p class="product-name"><a href="#">Непотопляемая селфи-палка</a></p>
                 <img class="product-photo" src="img/catalog-item-3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
                 <div class="product-actions">
-                  <button class="button product-to-bin">В корзину</button>
+                  <a class="button product-to-bin" href="#">В корзину</a>
                   <p class="product-to-comparison"><a href="#">Добавить к сравнению</a></p>
                 </div>
                 <p class="product-price">2500 руб.</p>
               </li>
               <li class="product product-new">
-                <p class="product-name">Селфи-палка "Следуй за мной"</p>
+                <p class="product-name"><a href="#">Селфи-палка "Следуй за мной"</a></p>
                 <img class="product-photo" src="img/catalog-item-4.jpg" width="360" height="380" alt="Селфи-палка 'Следуй за мной'">
                 <div class="product-actions">
-                  <button class="button product-to-bin">В корзину</button>
+                  <a class="button product-to-bin" >В корзину</a>
                   <p class="product-to-comparison"><a href="#">Добавить к сравнению</a></p>
                 </div>
                 <p class="product-price">4900 руб.</p>
@@ -188,21 +205,22 @@
             </ul>
           </section>
 
-            <ul class="pagination">
+          <ul class="pagination">
               <li class="pagination-control pagination-control-backwards"><a href="#">Назад</a></li>
               <li><a href="#" class="current-page">1</a></li>
               <li><a href="#">2</a></li>
               <li><a href="#">3</a></li>
               <li class="pagination-control pagination-control-forward"><a href="#">Вперед</a></li>
             </ul>
-          </div>
         </div>
+
+      </div>
+		</div>
 
     </main>
 
-    <div class="underlay footer-underlay">
-      <div class="container-centrifier">
         <footer class="footer footer-catalog">
+					<div class="container-centrifier">
           <section class="footer-top">
 
             <a href="index.html">
@@ -212,7 +230,7 @@
           </a>
 
             <ul class="user-interface user-interface-footer user-interface-footer-catalog">
-              <li class="user-interface-option user-interface-enter"><a href="#">Валентин Петухов</a></li>
+              <li class="user-interface-option user-interface-enter"><a href="#profile">Валентин Петухов</a></li>
               <li class="user-interface-option user-interface-exit"><a href="#">Выйти</a></li>
               <li class="user-interface-option user-interface-compare"><a href="#">Сравнить</a></li>
               <li class="user-interface-option user-interface-cart"><a href="#">Корзина</a></li>
@@ -226,7 +244,7 @@
               <li class="nav-index-option"><a href="warranty.html">Гарантия</a></li>
               <li class="nav-index-option"><a href="contacts.html">Контакты</a></li>
             </ul>
-            <p class="footer-contacts">Тел.: +7 (495) 495-95-95</p>
+            <p class="footer-contacts footer-contacts-tel">Тел.: +7 (495) 495-95-95</p>
           </section>
 
           <section class="footer-bottom">
@@ -240,8 +258,9 @@
               <img src="img/svg/logo-html.svg" width="27" height="35" alt="Логотип HTML академии">
             </a>
           </section>
+					</div>
         </footer>
-      </div>
-    </div>
+
+
   </body>
 </html>
