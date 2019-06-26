@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Dmitry Stepanov: Девайс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/min.style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body>
 
@@ -26,8 +26,10 @@
 
         <div class="container">
           <form class="index-search" action="#" method="post">
-            <label class="visually-hidden" for="search">Поиск по сайту</label>
-            <input class="index-search-input" id="search" type="search" name="search" placeholder="Поиск по сайту">
+            <label class="label" for="search">
+              <span class="visually-hidden">Поиск по сайту</span>
+            </label>
+            <input class="index-search-input" id="search" type="search" name="search" placeholder="Поиск по сайту" required>
             <button class="button search-submit" type="submit">Найти</button>
           </form>
           <ul class="user-interface user-interface-header">
@@ -68,19 +70,24 @@
         <h1 class="visually-hidden">Интернет-магазин Device</h1>
 
         <section class="main-slider">
-          <form class="main-slider-toggler" action="#" method="post">
-            <input type="button" name="main-slider-control" value="Слайд-1">
-            <input type="button" name="main-slider-comtrol" value="Слайд-2">
-            <input type="button" name="main-slider-control" value="Слайд-3">
-          </form>
+          <input class="visually-hidden" type="radio" name="main-slider-control" id="main-slider-control-1" value="main-slider-control-1" checked>
+          <input class="visually-hidden" type="radio" name="main-slider-control" id="main-slider-control-2" value="main-slider-control-2">
+          <input class="visually-hidden" type="radio" name="main-slider-control" id="main-slider-control-3" value="main-slider-control-3">
+          <div class="main-slider-toggler">
+            <label for="main-slider-control-1">Первый</label>
+            <label for="main-slider-control-2">Второй</label>
+            <label for="main-slider-control-3">Третий</label>
+          </div>
+
+
           <ul class="main-slider-list">
-            <li class="main-slide main-slide-1">
+            <li class="main-slide main-slide-1" id="main-slide-1">
               <div class="container main-slide-left-column">
                 <img src="img/slider-1.png" width="385" height="480" alt="Делай селфи, как Бен Стиллер!">
               </div>
               <div class="container main-slide-right-column">
                 <h2>Делай селфи,<br> как Бен Стиллер!</h2>
-                <p>Самая длинная палка для селфи доступна в нашем магазине.
+                <p>Самая длинная палка для селфи доступна в нашем магазине.<br>
                    Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.
                 </p>
                 <a class="button" href="#">Подробнее</a>
@@ -98,12 +105,12 @@
                 </table>
               </div>
             </li>
-            <li class="main-slide main-slide-2">
+            <li class="main-slide main-slide-2" id="main-slide-2">
               <div class="container main-slide-left-column">
                 <img src="img/slider-2.png" width="385" height="480" alt="Худеем правильно!">
               </div>
               <div class="container main-slide-right-column">
-                <h2>Худеем правильно</h2>
+                <h2>Худеем<br> правильно!</h2>
                 <p>Мотивирующие фитнес-браслеты помогут найти в себе силы
                    не пропускать занятия и соблюдать диету.
                 </p>
@@ -118,7 +125,7 @@
                 </table>
               </div>
             </li>
-            <li class="main-slide main-slide-3">
+            <li class="main-slide main-slide-3" id="main-slide-3">
               <div class="container main-slide-left-column">
                 <img src="img/slider-3.png" width="385" height="480" alt="Порхает как бабочка, жалит как пчела!">
               </div>
@@ -184,12 +191,15 @@
       </div>
 
       <section class="service-slider">
+        <input class="visually-hidden" type="radio" name="service-slider-control" id="service-slider-control-1" value="service-slider-control-1" checked>
+        <input class="visually-hidden" type="radio" name="service-slider-control" id="service-slider-control-2" value="service-slider-control-2">
+        <input class="visually-hidden" type="radio" name="service-slider-control" id="service-slider-control-3" value="service-slider-control-3">
         <div class="container-centrifier">
           <div class="container service-slider-column-left">
             <ul class="service-slider-toggle">
-              <li class="service-slider-toggle-option" ><a class="button" href="#service-slide-1" id="service-toggle-1">Доставка</a></li>
-              <li class="service-slider-toggle-option" ><a class="button" href="#service-slide-2" id="service-toggle-2">Гарантия</a></li>
-              <li class="service-slider-toggle-option" ><a class="button" href="#service-slide-3" id="service-toggle-3">Кредит</a></li>
+              <li class="service-slider-toggle-option" ><label class="button" for="service-slider-control-1">Доставка</label></li>
+              <li class="service-slider-toggle-option" ><label class="button" for="service-slider-control-2">Гарантия</label></li>
+              <li class="service-slider-toggle-option" ><label class="button" for="service-slider-control-3">Кредит</label></li>
             </ul>
           </div>
           <div class="container service-slider-column-right">

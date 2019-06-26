@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Dmitry Stepanov: Девайс</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/min.style.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
   </head>
   <body class="inner-page">
 
@@ -27,8 +27,10 @@
 
         <div class="container">
           <form class="index-search" action="#" method="post">
-            <label class="visually-hidden" for="search">Поиск по сайту</label>
-            <input class="index-search-input" id="search" type="search" name="search" placeholder="Поиск по сайту">
+            <label class="label" for="search">
+              <span class="visually-hidden">Поиск по сайту</span>
+            </label>
+            <input class="index-search-input" id="search" type="search" name="search" placeholder="Поиск по сайту" required>
             <button class="button search-submit" type="submit">Найти</button>
           </form>
 
