@@ -33,7 +33,7 @@ form.addEventListener("submit", function (evt) {
   if (!login.value || !email.value) {
   evt.preventDefault();
   popup.classList.remove("modal-error");
-  popup.offsetWidth = popup.offsetWidth;  //разобраться что это означает
+  popup.offsetWidth = popup.offsetWidth;
   popup.classList.add("modal-error");
   console.log("hhhhhhh");
 } else {
